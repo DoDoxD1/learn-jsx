@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const name = "Arihant Jain";
-const currentYear = new Date().getFullYear();
+const imgUrl = "https://picsum.photos/200/300";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
-    <p>Created by {name}</p>
-    <p>Copyright {currentYear}</p>
+    <h1 className="heading" contentEditable="true" spellCheck="false">
+      Created by {name}
+    </h1>
+    <div className="container">
+      <img src={imgUrl + "?grayscale"} />
+      <img src={imgUrl} />
+      <img src={imgUrl + "?grayscale"} />
+    </div>
   </div>
 );
